@@ -7,6 +7,7 @@ from functools import partial
 from odoo.tools.misc import formatLang
 # from odoo.exceptions import UserError
 import logging
+import json
 _logger = logging.getLogger(__name__)
 
 
@@ -75,7 +76,7 @@ class SaleOrder(models.Model):
                 report_amount_untaxed = order.amount_untaxed
             else:
                 report_amount_untaxed = order.amount_total - sum(
-                    x[1] for x in order.amount_by_group)
+                    x[1] for x in order.tax_totals_json)
             order.report_amount_untaxed = report_amount_untaxed
 
     @api.onchange('company_id')
@@ -162,3 +163,40 @@ class SaleOrder(models.Model):
         if self.company_id.country_id.code == 'AR':
             return 'l10n_ar_sale.report_saleorder_document'
         return report_xml_id
+
+    # @api.depends('order_line.tax_id', 'order_line.price_unit', 'amount_total', 'amount_untaxed')
+    def _compute_tax_totals_json(self):
+        super()._compute_tax_totals_json()
+        for order in self:
+            order.tax_totals_json = json.loads(order.tax_totals_json).update({'amount_untaxed': order.report_amount_untaxed})
+            # Hacemos esto para disponer de fecha del pedido y cia para calcular
+            # impuesto con código python (por ej. para ARBA).
+            # lo correcto seria que esto este en un modulo que dependa de l10n_ar_account_withholding, pero queremos
+            # evitar ese modulo adicional por ahora
+            date_order = order.date_order or fields.Date.context_today(order)
+            order = order.with_context(invoice_date=date_order)
+            if not order.vat_discriminated:
+                currency = order.currency_id or order.company_id.currency_id
+                fmt = partial(formatLang, self.with_context(lang=order.partner_id.lang).env, currency_obj=currency)
+                res = {}
+                for line in order.order_line:
+                    price_reduce = line.price_unit * (1.0 - line.discount / 100.0)
+                    taxes = line.report_tax_id.compute_all(
+                        price_reduce, quantity=line.product_uom_qty, product=line.product_id,
+                        partner=order.partner_shipping_id)['taxes']
+                    for tax in line.report_tax_id:
+                        group = tax.tax_group_id
+                        res.setdefault(group, {'amount': 0.0, 'base': 0.0})
+                        for t in taxes:
+                            if t['id'] == tax.id or t['id'] in tax.children_tax_ids.ids:
+                                res[group]['amount'] += t['amount']
+                                res[group]['base'] += t['base']
+                res = sorted(res.items(), key=lambda l: l[0].sequence)
+                tax_totals_json = [(
+                    l[0].name, l[1]['amount'], l[1]['base'],
+                    fmt(l[1]['amount']), fmt(l[1]['base']),
+                    len(res),
+                ) for l in res]
+                print(tax_totals_json)
+                print(order.tax_totals_json)
+                print("*********--------******----------")
