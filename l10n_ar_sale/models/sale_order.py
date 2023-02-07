@@ -91,10 +91,46 @@ class SaleOrder(models.Model):
 
     def _compute_tax_totals(self):
         """ Mandamos en contexto el invoice_date para calculo de impuesto con partner aliquot
-        ver módulo l10n_ar_account_withholding"""
-        for rec in self:
-            rec = rec.with_context(invoice_date=rec.date_order)
-            super(SaleOrder, rec)._compute_tax_totals()
+        ver módulo l10n_ar_account_withholding. Además acá reemplazamos el método _compute_tax_totals del módulo sale original de odoo"""
+        report_or_portal_view = 'commit_assetsbundle' in self.env.context or \
+            not self.env.context.get('params', {}).get('view_type') == 'form'
+        if not report_or_portal_view:
+            return super()._compute_tax_totals()
+        for order in self:
+            order = order.with_context(invoice_date=order.date_order)
+            order_lines = order.order_line.filtered(lambda x: not x.display_type)
+            order.tax_totals = self.env['account.tax']._prepare_tax_totals(
+                [x._convert_to_tax_base_line_dict() for x in order_lines],
+                order.currency_id or order.company_id.currency_id,
+            )
+
+            # Lo que sigue de acá hasta el final del método es medio feo y sirve por si algún presupuesto 
+            # cuyo cliente no corresponda discriminar el
+            # iva pero tiene alguna percepción o impuesto diferente a iva entonces tenemos que mostrar esa
+            # percepción o impuesto diferente y ocultar el iva
+
+            # Esto es para saber todas los impuestos que se están cargando en todas las líneas de la orden de venta
+            order_line_taxes = order.order_line.mapped('tax_id.tax_group_id.l10n_ar_vat_afip_code')
+
+            # Acá lo que hacemos es ocultar del presupuesto impreso todos aquellos impuestos que no sean iva cuando
+            #  el cliente no discrimina iva
+            if not order.vat_discriminated:
+                taxes = order.tax_totals['groups_by_subtotal']
+                for tax in taxes:
+                    contador = 0
+                    listado_a_borrar = []
+                    for rec1 in taxes[tax]:
+                        tax_group_id = rec1['tax_group_id']
+                        l10n_ar_vat_afip_code = self.env['account.tax.group'].browse(tax_group_id).l10n_ar_vat_afip_code
+
+                        if l10n_ar_vat_afip_code in order_line_taxes and l10n_ar_vat_afip_code != False:
+                            listado_a_borrar.append(contador)
+                        contador += 1
+                    if len(listado_a_borrar)>0:
+                        listado_a_borrar.reverse()
+                        for index in listado_a_borrar:
+                            taxes[tax].pop(index)
+
 
     def _get_name_sale_report(self, report_xml_id):
         """ Method similar to the '_get_name_invoice_report' of l10n_latam_invoice_document
