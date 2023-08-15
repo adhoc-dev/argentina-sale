@@ -58,79 +58,28 @@ class SaleOrder(models.Model):
                     sale_checkbook.sequence_id._next() or _('New')
         return super(SaleOrder, self).create(vals)
 
-    # TODO merge this on _compute_tax_totals
-    # def _compute_tax_totals_json(self):
-    #     # usamos mismo approach que teniamos para facturas en v13, es decir, con esto sabemos si se está solicitando el
-    #     # json desde reporte o qweb y en esos casos vemos de incluir impuestos, pero en backend siempre discriminamos
-    #     # eventualmente podemos usar mismo approach de facturas en v15 donde ya no se hace asi, si no que cambiamos
-    #     # el reporte de facturas usando nuevo metodo _l10n_ar_get_invoice_totals_for_report
-    #     report_or_portal_view = 'commit_assetsbundle' in self.env.context or \
-    #         not self.env.context.get('params', {}).get('view_type') == 'form'
-    #     if not report_or_portal_view:
-    #         return super()._compute_tax_totals_json()
-    #     for order in self:
-    #         # Hacemos esto para disponer de fecha del pedido y cia para calcular
-    #         # impuesto con código python (por ej. para ARBA).
-    #         # lo correcto seria que esto este en un modulo que dependa de l10n_ar_account_withholding, pero queremos
-    #         # evitar ese modulo adicional por ahora
-    #         date_order = order.date_order or fields.Date.context_today(order)
-    #         order = order.with_context(invoice_date=date_order)
-    #         if order.vat_discriminated:
-    #             super(SaleOrder, order)._compute_tax_totals_json()
-    #         else:
-    #             def compute_taxes(order_line):
-    #                 price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
-    #                 order = order_line.order_id
-    #                 return order_line.report_tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
-
-    #             account_move = self.env['account.move']
-    #             for order in self:
-    #                 tax_lines_data = account_move._prepare_tax_lines_data_for_totals_from_object(order.order_line, compute_taxes)
-    #                 tax_totals = account_move._get_tax_totals(order.partner_id, tax_lines_data, order.amount_total, order.amount_untaxed, order.currency_id)
-    #                 order.tax_totals_json = json.dumps(tax_totals)
-
     def _compute_tax_totals(self):
         """ Mandamos en contexto el invoice_date para calculo de impuesto con partner aliquot
         ver módulo l10n_ar_account_withholding. Además acá reemplazamos el método _compute_tax_totals del módulo sale original de odoo"""
+        super()._compute_tax_totals()
         report_or_portal_view = 'commit_assetsbundle' in self.env.context or \
             not self.env.context.get('params', {}).get('view_type') == 'form'
         if not report_or_portal_view:
-            return super()._compute_tax_totals()
-        for order in self:
-            order = order.with_context(invoice_date=order.date_order)
-            order_lines = order.order_line.filtered(lambda x: not x.display_type)
-            order.tax_totals = self.env['account.tax']._prepare_tax_totals(
-                [x._convert_to_tax_base_line_dict() for x in order_lines],
-                order.currency_id or order.company_id.currency_id,
-            )
+            return
 
-            # Lo que sigue de acá hasta el final del método es medio feo y sirve por si algún presupuesto 
-            # cuyo cliente no corresponda discriminar el
-            # iva pero tiene alguna percepción o impuesto diferente a iva entonces tenemos que mostrar esa
-            # percepción o impuesto diferente y ocultar el iva
-
-            # Esto es para saber todas los impuestos que se están cargando en todas las líneas de la orden de venta
-            order_line_taxes = order.order_line.mapped('tax_id.tax_group_id.l10n_ar_vat_afip_code')
-
-            # Acá lo que hacemos es ocultar del presupuesto impreso todos aquellos impuestos que no sean iva cuando
-            #  el cliente no discrimina iva
-            if not order.vat_discriminated:
-                taxes = order.tax_totals['groups_by_subtotal']
-                for tax in taxes:
-                    contador = 0
-                    listado_a_borrar = []
-                    for rec1 in taxes[tax]:
-                        tax_group_id = rec1['tax_group_id']
-                        l10n_ar_vat_afip_code = self.env['account.tax.group'].browse(tax_group_id).l10n_ar_vat_afip_code
-
-                        if l10n_ar_vat_afip_code in order_line_taxes and l10n_ar_vat_afip_code != False:
-                            listado_a_borrar.append(contador)
-                        contador += 1
-                    if len(listado_a_borrar)>0:
-                        listado_a_borrar.reverse()
-                        for index in listado_a_borrar:
-                            taxes[tax].pop(index)
-
+        for order in self.filtered(lambda x: not x.vat_discriminated):
+            tax_groups = order.order_line.mapped('tax_id.tax_group_id')
+            if not tax_groups:
+                continue
+            to_remove_ids = tax_groups.filtered(lambda x: x.l10n_ar_vat_afip_code).ids
+            tax_group_name = list(order.tax_totals['groups_by_subtotal'].keys())[0]
+            tax_group_vals = order.tax_totals['groups_by_subtotal'].get(tax_group_name)
+            for item in tax_group_vals:
+                if item.get('tax_group_id') in to_remove_ids:
+                    tax_group_vals.remove(item)
+            new_totals = order.tax_totals
+            new_totals['groups_by_subtotal'].update({tax_group_name: tax_group_vals})
+            order.tax_totals = new_totals
 
     def _get_name_sale_report(self, report_xml_id):
         """ Method similar to the '_get_name_invoice_report' of l10n_latam_invoice_document
