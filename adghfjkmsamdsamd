@@ -1,0 +1,1784 @@
+[33mcommit 4ad99068e3592798a92a08991b8e60888ca6a18b[m[33m ([m[1;36mHEAD -> [m[1;32m17.0-h-101218-apa[m[33m)[m
+Author: “Antonio <apa@adhoc.com.ar>
+Date:   Tue Jul 23 12:57:02 2024 -0300
+
+    commit en odoo-argentina
+
+[33mcommit 9a7ccfee34da30f897ae4d2959442e0e141225a7[m[33m ([m[1;31morigin/tmp.17.0[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/17.0[m[33m, [m[1;32m17.0[m[33m)[m
+Author: Maximiliano Mezzavilla <mem@adhoc.com.ar>
+Date:   Mon May 27 18:57:26 2024 +0000
+
+    [ADD] l10n_ar_stock: Tomamos el CUIT de la empresa asociada al talonario del remito
+    
+    closes ingadhoc/argentina-sale#179
+    
+    Task: 39729
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+
+[33mcommit 484429574655a42f2539c2633ed3deda466614e6[m
+Author: Franco Leyes <lef@adhoc.com.ar>
+Date:   Tue Jun 25 17:04:46 2024 +0000
+
+    [FIX] _sale and _sale_order_type: compatibility with ecommerce in checkbooks
+    
+    closes ingadhoc/argentina-sale#185
+    
+    X-original-commit: 5c028800fe2175d57c2e7fdf96cdd33e136ece02
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+    Signed-off-by: Franco Leyes <lef@adhoc.com.ar>
+
+[33mcommit bdb85836624bfa855a6eb3f34ae5274428b18ab8[m
+Author: Maximiliano Mezzavilla <mem@adhoc.com.ar>
+Date:   Wed Jun 5 15:50:07 2024 +0000
+
+    [FIX] l10n_ar_stock: Se pisan los datos del contacto con los de la orden
+    
+    closes ingadhoc/argentina-sale#182
+    
+    Ticket: 74843
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+
+[33mcommit b22877ac924f65c410215d1fdbecebeaf12fb10a[m
+Author: Pablo Montenegro <pam@adhoc.com.ar>
+Date:   Tue May 28 21:04:50 2024 +0000
+
+    [FIX] l10n_ar_sale: error al hacer vista previa de pedido de venta
+    
+    closes ingadhoc/argentina-sale#181
+    
+    Ticket: 75538
+    X-original-commit: e3eb4288e30d06569420c204ad38e2ec5e858b58
+    Signed-off-by: Filoquin adhoc <maq@adhoc.com.ar>
+    Signed-off-by: pablohmontenegro <pam@adhoc.com.ar>
+
+[33mcommit 1d03ae193fb9d9e60066e010a95ace8d1ed203e0[m
+Author: Maximiliano Mezzavilla <mem@adhoc.com.ar>
+Date:   Mon Apr 29 18:47:35 2024 +0000
+
+    [MIG] l10n_ar_stock_delivery: Migration to 17.0
+    
+    closes ingadhoc/argentina-sale#172
+    
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+
+[33mcommit a4870c1b0e668fa7a1404dbeb583f27ac338f85c[m
+Author: Matias Peralta <matias_peralta1@hotmail.com>
+Date:   Thu May 2 15:03:31 2024 -0300
+
+    [FIX] l10n_ar_stock: message_post with html fixed
+
+[33mcommit d4e7bc403b0ef07668ead09c6f58e9335f4c8721[m
+Author: Maximiliano Mezzavilla <mem@adhoc.com.ar>
+Date:   Mon Feb 5 15:34:32 2024 +0000
+
+    [MIG] l10n_ar_stock: Migration to 17.0
+    
+    closes ingadhoc/argentina-sale#150
+    
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+
+[33mcommit 5f290f966db5ec0c9d6578d208f9b0feb7cbb705[m
+Author: mav-adhoc <mav@adhoc.com.ar>
+Date:   Tue Jan 23 15:24:34 2024 +0000
+
+    [FIX] l10n_ar_stock: report_deliveryslip
+    
+    closes ingadhoc/argentina-sale#149
+    
+    X-original-commit: 5d4e8c1699296bb8f79bf04cb3234a3c0f49da56
+    Signed-off-by: Juan Carreras <jc@adhoc.com.ar>
+
+[33mcommit 1acbce2994572a341d2c14fee7d06335576fbf63[m
+Author: Maximiliano Mezzavilla <mem@adhoc.com.ar>
+Date:   Fri Mar 22 12:30:03 2024 +0000
+
+    [FIX] l10n_ar_sale: Ahora get se usa con _get
+    
+    Major Version: 59
+    
+    closes ingadhoc/argentina-sale#159
+    
+    Signed-off-by: Juan José Scarafía <jjs@adhoc.com.ar>
+
+[33mcommit 02b2ef3fa9a99d65c7dc11f368a0e37370d4b72e[m
+Author: Maximiliano Mezzavilla <mem@adhoc.com.ar>
+Date:   Tue Mar 26 17:36:29 2024 +0000
+
+    [FIX] l10n_ar_sale: Fix for changes in the native quotes report
+    
+    closes ingadhoc/argentina-sale#162
+    
+    Tarea: 34316
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+
+[33mcommit 3ca0f8ce5bf74f78863f8750f9a9f76002ec3369[m
+Author: Maximiliano Mezzavilla <mem@adhoc.com.ar>
+Date:   Wed Mar 6 15:33:11 2024 +0000
+
+    [MIG] l10n_ar_sale_order_type: Migration to 17.0
+    
+    closes ingadhoc/argentina-sale#156
+    
+    Signed-off-by: Juan José Scarafía <jjs@adhoc.com.ar>
+
+[33mcommit 3eb1451dcc04d2bc3fb252bbf19f93cb34ad2a46[m
+Author: Pablo Montenegro <pam@adhoc.com.ar>
+Date:   Fri Mar 15 20:09:12 2024 +0000
+
+    [IMP] l10n_ar_sale: add incoterm to argentinean saleorder report
+    
+    closes ingadhoc/argentina-sale#158
+    
+    Ticket: 71769
+    X-original-commit: 821b37b0940c196382997e3a24b69d968f0687d6
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+    Signed-off-by: pablohmontenegro <pam@adhoc.com.ar>
+
+[33mcommit 9975cb3e4dd9da9faacee903d76e5e1f9ccde55f[m
+Author: docker-odoo <lef@adhoc.com.ar>
+Date:   Tue Feb 27 19:53:35 2024 +0000
+
+    [IMP] l10n_ar_sale: the checkbook is set by searching first for the properties
+    
+    closes ingadhoc/argentina-sale#154
+    
+    X-original-commit: 85351fde910e544a0230477891890741ad48adc5
+    Signed-off-by: matiasperalta1 <mnp@adhoc.com.ar>
+
+[33mcommit 28c052e33614e2b429941f16e9a47348cfa9535a[m
+Author: Matias Peralta <matias_peralta1@hotmail.com>
+Date:   Thu Dec 7 15:45:15 2023 +0000
+
+    [MIG] l10n_ar_sale: Migration to 17.0
+    
+    closes ingadhoc/argentina-sale#142
+    
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+
+[33mcommit b250820ba5d645bfdc808a1e2e4fbc84c5e0eddf[m
+Author: augusto-weiss <awe@adhoc.com.ar>
+Date:   Wed Jan 3 16:25:59 2024 +0000
+
+    [FIX] l10n_ar_stock: ensure str field
+    
+    [FIX] l10n_ar_stock: add ssl to url
+    
+    closes ingadhoc/argentina-sale#146
+    
+    X-original-commit: 001e636f2714223cf4a5e6a966bcd9ef461687a4
+    Signed-off-by: Alexis Lopez <loa@adhoc.com.ar>
+    Signed-off-by: augusto-weiss <awe@adhoc.com.ar>
+
+[33mcommit f31c608e699ceb74b539c427f0d10cf942f0cae1[m
+Author: Juan Ignacio Carreras <jc@adhoc.com.ar>
+Date:   Mon Nov 6 10:49:53 2023 -0300
+
+    [FIX]l10n_ar_stock: add l10n_ar_afip_barcode value
+    
+    X-original-commit: 31c0a2ff58510a9d17855e3c2d35cbca216ae2ed
+
+[33mcommit 173d6602543848be23820a790f497ff7834e0c8e[m
+Author: Juan Ignacio Carreras <jc@adhoc.com.ar>
+Date:   Thu Oct 26 10:27:40 2023 -0300
+
+    [FIX]l10n_ar_stock: now I2of5 cant be used
+    
+    X-original-commit: 3d154474aabf770ba30d20cddcd7057b05c4ef6b
+
+[33mcommit 7c95315e3dff0b29c5cc7fc7f059c4264810d9fd[m
+Author: adhoc-cicd-bot <116299102+adhoc-cicd-bot@users.noreply.github.com>
+Date:   Wed Oct 25 15:22:59 2023 -0300
+
+    [UPD] Initialize version 17.0
+
+[33mcommit 25e1b369ba80acd19105e5a494784f60374c7f1d[m
+Merge: 926af5e 72a967d
+Author: Matias Velazquez <129897567+mav-adhoc@users.noreply.github.com>
+Date:   Mon Oct 23 18:27:40 2023 +0000
+
+    Merge branch '16.0' into 16.0-t-33433-mav
+    
+    closes ingadhoc/argentina-sale#133
+    
+    Signed-off-by: Juan Carreras <jc@adhoc.com.ar>
+
+[33mcommit 72a967dc837722c23d27e511e409c1d1cc2da3bd[m
+Author: mav-adhoc <mav@adhoc.com.ar>
+Date:   Fri Sep 22 15:52:48 2023 -0300
+
+    [ADD] l10n_ar_stock: COT in report_deliveryslip
+
+[33mcommit 926af5e3bd33859d3df8a58c6bf620399eb7d26e[m
+Author: mav-adhoc <mav@adhoc.com.ar>
+Date:   Fri Sep 29 17:42:26 2023 +0000
+
+    [FIX] l10n_ar_stock: COT / move_ids
+    
+    closes ingadhoc/argentina-sale#134
+    
+    Signed-off-by: Bruno Zanotti <bz@adhoc.com.ar>
+
+[33mcommit bbd2755d721f1d198968836cdeec0f37eb25f98e[m
+Author: Matias Peralta <matias_peralta1@hotmail.com>
+Date:   Wed Sep 6 15:09:43 2023 +0000
+
+    [ADD] l10n_ar_sale: add delivery_date into quotation report and online
+    
+    closes ingadhoc/argentina-sale#130
+    
+    Signed-off-by: jok-adhoc <jok@adhoc.com.ar>
+
+[33mcommit dd80676f1cb6652589afdb3d7882d67e9852d747[m
+Author: Juan José Scarafia <jjs@adhoc.com.ar>
+Date:   Thu Aug 31 14:22:25 2023 +0000
+
+    [FIX] l10n_ar_sale: re add fix for printing report
+    
+    closes ingadhoc/argentina-sale#129
+    
+    Signed-off-by: matiasperalta1 <mnp@adhoc.com.ar>
+
+[33mcommit 31fa4f7ea927beba42b436688f89cdfd1fcdde53[m
+Author: Juan José Scarafia <jjs@adhoc.com.ar>
+Date:   Thu Aug 31 14:21:39 2023 +0000
+
+    Revert "[FIX] l10n_ar_sale: quotation vat_discrimination fixed"
+    
+    This reverts commit 0f8d4eb9b5250659abceba51786144c7ead0b8ea.
+    
+    Part-of: ingadhoc/argentina-sale#129
+
+[33mcommit 26cb24caa2fdc79ea850f4187c0135448ffbb823[m
+Author: Matias Peralta <matias_peralta1@hotmail.com>
+Date:   Wed Aug 30 14:44:02 2023 +0000
+
+    [FIX] l10n_sale: revert change of _compute_tax_totals
+    
+    closes ingadhoc/argentina-sale#128
+    
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+
+[33mcommit bec17b95de3ec4c71b46019b344c73be98e2ccbb[m
+Author: Pablo Montenegro <pam@adhoc.com.ar>
+Date:   Tue Feb 7 20:45:55 2023 +0000
+
+    [IMP] l10n_ar_sale: arreglar impresión de presupuesto
+    
+    Task: 28700
+    Lo que hace este pr es que la impresión del presupuesto discrimine o no el iva de acuerdo a la condición fiscal del cliente.
+    
+    closes ingadhoc/argentina-sale#121
+    
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+
+[33mcommit f32f70d27ecaf10c3dd51cd57f81ee5cbbd91dd4[m
+Author: juancarreras97 <jc@adhoc.com.ar>
+Date:   Fri Jul 14 13:24:49 2023 +0000
+
+    [ADD]l10n_ar_stock:data demo
+    
+    closes ingadhoc/argentina-sale#127
+    
+    Signed-off-by: Virginia Bonservizi <vib@adhoc.com.ar>
+
+[33mcommit 5db145522c719489fe5909f922d0ecd7a0fc7f20[m
+Author: jok-adhoc <jok@adhoc.com.ar>
+Date:   Thu Jul 6 13:12:14 2023 +0000
+
+    [FIX]l10n_ar_sale: quotation vat_discrimination
+    
+    closes ingadhoc/argentina-sale#126
+    
+    Signed-off-by: matiasperalta1 <mnp@adhoc.com.ar>
+
+[33mcommit 8dfd5b8c55e7fc765b8bfc627be87366a8c8725b[m
+Author: docker-odoo <kz@adhoc.com.ar>
+Date:   Wed Jun 28 14:57:10 2023 +0000
+
+    [FIX] l10n_ar_sale: create invoices from other records
+    
+    Por alguna razon cuando voy a crear la factura a traves de una devolucion, no me esta permitiendo crearla
+    y validarla porque resulta el campo tipo de documento esta quedando vacio. Este campo se llena y computa
+    automaticamente al generar al modificar el diaro de una factura.
+    
+    Si hacemos la prueba funcional desde la interfaz funciona, si intento importar la factura con el importador de
+    Odoo funciona, pero si la voy a crear desde la devolucion inventario no se rellena dicho campo.
+    
+    Para solventar decimos si tenemos facturas que usan documentos y que no tienen un tipo de documento, intentamos
+    computarlo y asignarlo, esto aplica para cuando generamos una factura desde una orden de venta o suscripcion
+    
+    closes ingadhoc/argentina-sale#125
+    
+    Signed-off-by: Ignacio Cainelli <ica@adhoc.com.ar>
+
+[33mcommit 0f8d4eb9b5250659abceba51786144c7ead0b8ea[m
+Author: matiasperalta1 <matias_peralta1@hotmail.com>
+Date:   Wed Jun 14 20:52:57 2023 +0000
+
+    [FIX] l10n_ar_sale: quotation vat_discrimination fixed
+    
+    closes ingadhoc/argentina-sale#124
+    
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+
+[33mcommit aff4d32ec5b845ed17483f9972d1b4fb27d4873d[m
+Author: Virginia Bonservizi <vib@adhoc.com.ar>
+Date:   Fri May 5 14:12:59 2023 +0000
+
+    [FIX] l10n_ar_sale: inheritance fix
+    
+    closes ingadhoc/argentina-sale#122
+    
+    Signed-off-by: augusto-weiss <awe@adhoc.com.ar>
+
+[33mcommit 87ac5eda204256a2400fd0194ea62b51ca015df2[m
+Author: Maximiliano Mezzavilla <mem@adhoc.com>
+Date:   Thu Dec 15 17:45:10 2022 +0000
+
+    [MIG] l10n_ar_sale_order_type: Migration to 16.0
+    
+    closes ingadhoc/argentina-sale#115
+    
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+
+[33mcommit 54b37b4828244c6d016ce695e5fd38a2355e0bf8[m
+Author: Virginia Bonservizi <vib@adhoc.com.ar>
+Date:   Thu Dec 15 14:23:13 2022 +0000
+
+    [FIX] l10n_ar_stock: report signature section adjustment
+    
+    closes ingadhoc/argentina-sale#120
+    
+    X-original-commit: baf9ff5a34db669194786f4845b5debfd115a5de
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+
+[33mcommit 14f5aab593d7a43a6df7814739352e73f7b260ee[m
+Author: ADHOC - Bot <bot@adhoc.com.ar>
+Date:   Fri Jan 20 15:45:25 2023 -0300
+
+    [I18N] Update translation terms from Transifex adhoc-odoo-16-0
+
+[33mcommit c645abea9cff781705f6257675d1b5d92a3c8c8b[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sun Jan 1 13:07:42 2023 +0000
+
+    [IMP] l10n_ar_sale: fix partner_aliquot computation
+    
+    Tambien comentamos metodo que estaba sin uso en v16 porque cambio
+    el nombre de super
+    
+    closes ingadhoc/argentina-sale#116
+    
+    Related: ingadhoc/odoo-argentina-ee#169
+    Related: ingadhoc/odoo-argentina#663
+    Related: ingadhoc/account-payment#339
+    Signed-off-by: Juan José Scarafía <jjs@adhoc.com.ar>
+
+[33mcommit ac6efd00f441a6ef4b49a2463034beb918165fa3[m
+Author: Virginia Bonservizi <vib@adhoc.com.ar>
+Date:   Tue Dec 27 15:55:13 2022 +0000
+
+    [MIG] l10n_ar_stock_delivery: Migration to 16.0
+    
+    closes ingadhoc/argentina-sale#114
+    
+    Signed-off-by: Juan José Scarafía <jjs@adhoc.com.ar>
+
+[33mcommit 19cc8b7184f0aeca7e60326a903cd4bcf5e65e2c[m
+Author: augusto-weiss <awe@adhoc.com.ar>
+Date:   Mon Dec 5 18:39:21 2022 +0000
+
+    [MIG] l10n_ar_stock: Migration to 16.0
+    
+    closes ingadhoc/argentina-sale#113
+    
+    Signed-off-by: Juan José Scarafía <jjs@adhoc.com.ar>
+
+[33mcommit 1561ffc50fbd3edb56e84b51cf388af91db86f80[m
+Author: Ignacio Cainelli <ica@adhoc.com.ar>
+Date:   Thu Oct 27 17:46:49 2022 +0000
+
+    [MIG] l10n_ar_sale: Migration to 16.0
+    
+    closes ingadhoc/argentina-sale#110
+    
+    Signed-off-by: Matias Peralta <mnp@adhoc.com.ar>
+
+[33mcommit 6330fdba6c5c2fb6fd3de19ea2ee24a7e1400bb0[m
+Author: adhoc-cicd-bot <116299102+adhoc-cicd-bot@users.noreply.github.com>
+Date:   Thu Oct 27 11:40:31 2022 -0300
+
+    [UPD] Initialize version 16.0
+
+[33mcommit 8566c1291e91d070649c56fb06de25a440bb3049[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Fri Sep 30 09:14:20 2022 -0300
+
+    Revert "[FIX] l10n_ar_stock: invoice print"
+    
+    This reverts commit 521a03210327ea1c1a9b981ce7b998e4047d6e2c.
+
+[33mcommit fb61adad05b61bc925d86e801dad465cb9ce3332[m
+Author: augusto-weiss <awe@adhoc.com.ar>
+Date:   Tue Sep 20 14:33:46 2022 +0000
+
+    [FIX] l10n_ar_stock: hide information in report_deliveryslip
+    
+    closes ingadhoc/argentina-sale#106
+    
+    Signed-off-by: Nicolas Mac Rouillon <nmr@adhoc.com.ar>
+
+[33mcommit 3f1319cc1d364141437fef44096fb184d5e0063a[m
+Author: Ignacio Cainelli <ica@adhoc.com.ar>
+Date:   Thu Apr 21 15:07:33 2022 +0000
+
+    [IMP] 110n_ar_sale: change message error
+    
+    The error message now shows that a VAT tax must be added
+    to that line and that if it is already added, it may be misconfigured.
+    
+    closes ingadhoc/argentina-sale#99
+    
+    X-original-commit: 14231f891573d5622382b4c257e09c55fb0b6083
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+    Signed-off-by: Nacho Cainelli <ica@adhoc.com.ar>
+
+[33mcommit d3abb06937ec00dddc2809801719572d383753d6[m
+Author: nicolas <nmr@adhoc.com.ar>
+Date:   Mon Aug 29 17:18:11 2022 +0000
+
+    [FIX] l10n_ar_sale: remove unused field
+    
+    closes ingadhoc/argentina-sale#104
+    
+    Signed-off-by: Juan José Scarafía <jjs@adhoc.com.ar>
+
+[33mcommit 40b893b4bae388d2cf3790ece7f25d45af2ce660[m
+Author: juancarreras97 <jc@adhoc.com.ar>
+Date:   Thu Jul 28 16:42:25 2022 +0000
+
+    [MIG] l10n_ar_sale_order_type: Migration to 15.0
+    
+    closes ingadhoc/argentina-sale#103
+    
+    Signed-off-by: Nicolas Mac Rouillon <nmr@adhoc.com.ar>
+
+[33mcommit a0a6c3eed9405c3502f8dcaf3d608b18b61a5776[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Jul 6 09:10:28 2022 -0300
+
+    [FIX] l10n_ar_sale: exclude taxes on backend
+
+[33mcommit 18dd22cfa30c61a0ab8ef9aa04fd636e39e0cf0a[m
+Author: Augusto Weiss <awe@adhoc.com.ar>
+Date:   Mon Jun 27 13:08:12 2022 +0000
+
+    [FIX] l10n_ar_stock: sudo in purchase fields to avoid permission problems
+    
+    closes ingadhoc/argentina-sale#101
+    
+    X-original-commit: 763bb4c4ac657b87854942277713c00698eb83fd
+    Signed-off-by: Bruno Zanotti <bz@adhoc.com.ar>
+
+[33mcommit 1f1c74082b1b47e3a4190565372d0d5700ed03cd[m
+Author: ADHOC - Bot <bot@adhoc.com.ar>
+Date:   Mon Apr 25 12:29:28 2022 -0300
+
+    [I18N] Update translation terms from Transifex adhoc-odoo-15-0
+
+[33mcommit e587a9af5a4af387e78218e3fd6fe409a03abc01[m
+Author: ADHOC - Bot <bot@adhoc.com.ar>
+Date:   Sun Apr 24 12:19:34 2022 -0300
+
+    [I18N] Update translation terms from Transifex adhoc-odoo-15-0
+
+[33mcommit 003e5843a7e5a0f4c84d73f3edcf14dfb65bf585[m
+Author: ADHOC - Bot <bot@adhoc.com.ar>
+Date:   Sat Apr 23 12:09:30 2022 -0300
+
+    [I18N] Update translation terms from Transifex adhoc-odoo-15-0
+
+[33mcommit 6fadf51d9a9db771dee9b238a77d858d705cfae5[m
+Author: ADHOC - Bot <bot@adhoc.com.ar>
+Date:   Fri Apr 22 11:59:36 2022 -0300
+
+    [I18N] Update translation terms from Transifex adhoc-odoo-15-0
+
+[33mcommit b7fc087b2801af920b221cb6c03ecd7a963ce0aa[m
+Author: ADHOC - Bot <bot@adhoc.com.ar>
+Date:   Thu Apr 21 11:49:28 2022 -0300
+
+    [I18N] Update translation terms from Transifex adhoc-odoo-15-0
+
+[33mcommit 62f240f5a39b473f980d9dbc9153967083e3bacf[m
+Author: ADHOC - Bot <bot@adhoc.com.ar>
+Date:   Wed Apr 20 11:39:33 2022 -0300
+
+    [I18N] Update translation terms from Transifex adhoc-odoo-15-0
+
+[33mcommit 43634eaf7267beebd85b17cbb49c717568e43065[m
+Author: Ignacio Cainelli <ica@adhoc.com.ar>
+Date:   Tue Apr 19 19:37:23 2022 +0000
+
+    [IMP] 110n_ar_sale: change message error
+    
+    The error message now shows that a VAT tax must be added
+    to that line and that if it is already added, it may be misconfigured.
+    
+    closes ingadhoc/argentina-sale#97
+    
+    X-original-commit: a07cd6369c763e9f25f6f2b47a192bfade56af31
+    Signed-off-by: Katherine Zaoral <kz@adhoc.com.ar>
+
+[33mcommit d916d3d643120e724360dcf6f856e61446bb0ea0[m
+Author: nicolas <nmr@adhoc.com.ar>
+Date:   Fri Mar 11 17:59:57 2022 +0000
+
+    [FIX] l10n_ar_stock: Solve issue when generate cot with some stock line cancelled.
+    
+    For the generation of the cot, the quantity zero is forbidden, with this change we ensure that any quantity must be different than zero.
+    
+    closes ingadhoc/argentina-sale#95
+    
+    X-original-commit: 2d397ecff0e5b68560ed18ff7c381697d87a6288
+    Signed-off-by: Bruno Zanotti <bz@adhoc.com.ar>
+    Signed-off-by: Nicolas Mac Rouillon <nmr@adhoc.com.ar>
+
+[33mcommit 83207fb6df27e4907cf925c3c23be414cbd0a11d[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon Jan 10 17:37:58 2022 +0000
+
+    [REM] l10n_ar_sale: discrmination vat company option
+    
+    closes ingadhoc/argentina-sale#91
+    
+    Related: ingadhoc/odoo-argentina#577
+    Signed-off-by: Juan José Scarafía <jjs@adhoc.com.ar>
+
+[33mcommit b83beea4c52386e1735362aede6b0c2868abffd6[m
+Author: nicolas <nmr@adhoc.com.ar>
+Date:   Mon Dec 27 14:01:59 2021 +0000
+
+    [FIX] l10n_ar_sale_order_type: Only change the nuber when the checkbook is changed.
+    
+    For a few cases when change the type and the checkbook of the type is different than the original in the SO and you want to keep the original, odoo assume
+    that you change the field, but it's not really changed.
+    
+    closes ingadhoc/argentina-sale#90
+    
+    X-original-commit: da24100fb2f7b36f93b639f9a64893f3a3010753
+    Signed-off-by: Pablo Paez Sheridan <pp@adhoc.com.ar>
+    Signed-off-by: Nicolas Mac Rouillon <nmr@adhoc.com.ar>
+
+[33mcommit d83198f611c6c157d215e4716258d8c3778aad00[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Fri Dec 24 16:59:20 2021 +0000
+
+    [IMP] l10n_ar_stock: arba code configurable from uom categ
+    
+    closes ingadhoc/argentina-sale#88
+    
+    Signed-off-by: Juan José Scarafía <jjs@adhoc.com.ar>
+
+[33mcommit 66bfdf69ad7a0f8acf6b51aa75e4a896d5bd6515[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Fri Dec 17 12:57:10 2021 +0000
+
+    [FIX] l10n_ar_stock: invoice print
+    
+    closes ingadhoc/argentina-sale#87
+    
+    Signed-off-by: Juan José Scarafía <jjs@adhoc.com.ar>
+
+[33mcommit e5f6b01b9ea86857e5e23b31bfabfc1bb03de858[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Dec 8 19:19:14 2021 +0000
+
+    [REF] use t-out instead of t-esc
+    
+    closes ingadhoc/argentina-sale#86
+    
+    Signed-off-by: Juan José Scarafía <jjs@adhoc.com.ar>
+
+[33mcommit be4c3ffda5aa42db6cd7b24313c830f8eeaa4974[m
+Author: raguero </SUlem@2017/>
+Date:   Tue Nov 23 01:25:06 2021 +0000
+
+    [MIG] l10n_ar_stock_delivery/: Migration to 15.0
+    
+    Part-of: ingadhoc/argentina-sale#86
+
+[33mcommit 241502574a66a08f18ecf66ad864e0bf41ec69e4[m
+Author: raguero </SUlem@2017/>
+Date:   Mon Nov 22 21:31:21 2021 +0000
+
+    [MIG][l10n_ar_stock] Remove stock_picking_invoice_link dep
+    
+    Part-of: ingadhoc/argentina-sale#86
+
+[33mcommit 8e17b8bbf9f21aaeeadb9cebf47601dd48208ced[m
+Author: raguero </SUlem@2017/>
+Date:   Mon Nov 22 21:24:51 2021 +0000
+
+    [MIG] l10n_ar_stock: Migration to 15.0
+    
+    Part-of: ingadhoc/argentina-sale#86
+
+[33mcommit 26f9818fd48b8df51466e8317c269c11bb4e0e39[m
+Author: Bruno Zanotti <bz@adhoc.com.ar>
+Date:   Tue Nov 30 11:42:27 2021 +0000
+
+    Revert "[MIG] l10n_ar_sale: approach l10n_ar invoices"
+    
+    This reverts commit 35d7b156293ad84df7418bf77d7efa1115225e63.
+    
+    closes ingadhoc/argentina-sale#81
+    
+    Signed-off-by: Juan José Scarafía <jjs@adhoc.com.ar>
+
+[33mcommit 20dfd1031c438ec0a66dd1671a27ef1445310ee9[m
+Author: Bruno Zanotti <bz@adhoc.com.ar>
+Date:   Thu Nov 25 19:45:53 2021 +0000
+
+    [MIG] l10n_ar_sale: approach l10n_ar invoices
+    
+    This commit migrates the module form 13.0 to 15.0 with an approach
+    similar to l10n_ar account moves.
+    
+    Part-of: ingadhoc/argentina-sale#81
+
+[33mcommit 319b766eb1f85b3baab9000d289142e6f15be34a[m
+Author: Bruno Zanotti <bz@adhoc.com.ar>
+Date:   Fri Nov 12 16:08:44 2021 +0000
+
+    [MIG] l10n_ar_sale: Migration to 15.0
+    
+    Part-of: ingadhoc/argentina-sale#81
+
+[33mcommit 8b83a81834254617ebfd0ade744c12a58b9b3580[m
+Author: nicolas <nmr@adhoc.com.ar>
+Date:   Wed Nov 17 12:04:31 2021 +0000
+
+    [FIX] l10n_ar_sale*: change the over of Write to the correct module to fulfill with dependencies
+    
+    closes ingadhoc/argentina-sale#83
+    
+    X-original-commit: 1b8a2ed5a1eb96ae7e1316433eaecd7bbde18338
+    Signed-off-by: Nicolas Mac Rouillon <nmr@adhoc.com.ar>
+
+[33mcommit 8957fd928befce4e2c9c0dbee8094e8b84096f20[m[33m ([m[1;31morigin/15.0-rebase-from-13.0[m[33m, [m[1;31morigin/13.0-t-24739-jjs[m[33m)[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Sat Nov 6 14:21:40 2021 -0300
+
+    Update README.md
+
+[33mcommit 9bedbf4e05eb48265f8ca1b7b5a829dccb9ff9ef[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Fri Oct 22 11:52:36 2021 -0300
+
+    [MIG] Update metafiles
+    
+    [skip ci]
+
+[33mcommit c57f20a42d5c516db6751ceafaba2c02b0bd8124[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Fri Oct 22 11:52:34 2021 -0300
+
+    [MIG] Make modules uninstallable
+
+[33mcommit c2ab7b21ffa92da572a2caca7131d3247d3857a4[m
+Author: nicolas <nmr@adhoc.com.ar>
+Date:   Wed Oct 20 11:23:32 2021 -0300
+
+    [13.0] [IMP] l10n_ar_sale: When change checkbook change the secuence of SO.
+
+[33mcommit 3dee0eb21221cb64ac52d386fd81ded4ea7843e8[m
+Author: nicolas <nmr@adhoc.com.ar>
+Date:   Fri Aug 27 16:27:26 2021 -0300
+
+    [13.0] [FIX] l10n_ar_stock: show the dispach involve when have values for the lots
+
+[33mcommit 10e2117d1b466798b21ec47a26af11ef611306d5[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sat Aug 7 14:43:26 2021 -0300
+
+    [IMP] l10n_ar_sale: only use arg report for arg companies
+    Revisamos a los clientes y casi nadie tenia otra compañía que no sea argentina. Ver mas info en la tarea.
+
+[33mcommit ca3b72b33b169d3e867199cf0a850d0e09a07959[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sat Aug 7 07:29:09 2021 -0300
+
+    [FIX] l10n_ar_sale: only use ar report on ar companies
+    We use same approach as in invoices, only argentinean companies use this report.
+    If user wants to use it for another company, he can add it with report_substitute module
+
+[33mcommit 7039ad76081a3f63776b00e6e62c3fceef358771[m
+Author: Bruno Zanotti (ADHOC) <bz@adhoc.com.ar>
+Date:   Wed Jul 7 16:37:14 2021 -0300
+
+    [IMP] l10n_ar_stock_delivery: add carrier identification
+    
+    If the picking has a carrier with partner associated, and that partner
+    has identification number it will be shown after the carrier name in the
+    report.
+
+[33mcommit d1c736243dab2353172162fe6243323086d56f95[m
+Author: Pablo Paez <pablopaezps97@gmail.com>
+Date:   Tue Jul 6 14:59:30 2021 -0300
+
+    [FIX]l10n_ar_sale:show payment term description
+    
+    show the note field of accunt.payment.term on saler order report
+
+[33mcommit e056f737ec90d4833b90aba9fb8801491d814e3b[m
+Author: Bruno Zanotti (ADHOC) <bz@adhoc.com.ar>
+Date:   Tue May 18 13:10:46 2021 -0300
+
+    [FIX] l10n_ar_stock: show VAT on invoices report
+    
+    Steps to replicate the error:
+    1. Create a partner with:
+        - Responsibility type: "Cliente / Proveedor del Exterior"
+        - Identification number: "VAT" with a random number.
+    2. Create and print an invoice for this partner.
+    
+    Before this commit, the vat number was empty.
+
+[33mcommit 44d8dce22be2954dc1cca46da12ac7142f4c7d7b[m
+Author: Bruno Zanotti (ADHOC) <bz@adhoc.com.ar>
+Date:   Tue May 18 13:09:52 2021 -0300
+
+    [FIX] l10n_ar_sale: show VAT on invoices report
+    
+    Steps to replicate the error:
+    1. Create a partner with:
+        - Responsibility type: "Cliente / Proveedor del Exterior"
+        - Identification number: "VAT" with a random number.
+    2. Create and print an invoice for this partner.
+    
+    Before this commit, the vat number was empty.
+
+[33mcommit a296809336353744272fa37d5c3e6afe6bf66764[m
+Author: Bruno Zanotti (ADHOC) <bz@adhoc.com.ar>
+Date:   Tue Jun 1 14:09:42 2021 -0300
+
+    [IMP] l10n_ar_stock:  Add signature space in the delivery slip report
+
+[33mcommit 8f063365e25b290c8bf27214a29c5a64514152aa[m
+Author: Nicolás Mac Rouillon <nmr@adhoc.com.ar>
+Date:   Thu May 27 11:50:10 2021 -0300
+
+    [13.0] [ADD] l10n_ar_stock: Add remits to invoice report.
+
+[33mcommit f0b7e3719367f2b6428ddd1a2ad0d9ca44f63402[m
+Author: Nicolás Mac Rouillon <nmr@adhoc.com.ar>
+Date:   Fri Apr 30 09:48:49 2021 -0300
+
+    [IMP] Show the dispach after comments in the invoice report.
+
+[33mcommit 334df3ef900786a0879a1c1d0b02e1958073f1e9[m
+Author: Nicolás Mac Rouillon <nmr@adhoc.com.ar>
+Date:   Tue Apr 27 12:21:47 2021 -0300
+
+    [13.0] [IMP] l10n_ar_stock: Add invoice line linked to sml.
+    
+    Modify the orginal method to consider the sml of the current invoice line not all, who is the way that odoo does.
+
+[33mcommit 43ede16245089eef640ac50fe2c071f739219952[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Thu May 13 13:28:24 2021 -0300
+
+    [ADD] l10n_ar_stock: duplicado/triplicado (#70)
+
+[33mcommit 310d994f8da466263605d48ae247ac4138e91f3f[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Tue May 11 17:14:19 2021 -0300
+
+    [IMP] l10n_ar_stock: add mobile/phone
+    Son útiles para los transportistas, para que puedan contactar al destinatario
+
+[33mcommit f9c01e8354d22ab21446fdcf5e5213e924d10ebe[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sat May 8 07:37:19 2021 -0300
+
+    [FIX] l10n_ar_stock: CAI instead of CAE
+
+[33mcommit ec773f5e4da2f2c7d8b2178aa906c022a25cdfcd[m
+Author: Bruno Zanotti (ADHOC) <bz@adhoc.com.ar>
+Date:   Thu Apr 22 09:08:41 2021 -0300
+
+    [FIX] l10n_ar_stock: show the number of all the document types in the reports
+
+[33mcommit 8ff952b9802193af73b5d5fd2791f190bb0ec0d1[m
+Author: Bruno Zanotti (ADHOC) <bz@adhoc.com.ar>
+Date:   Thu Apr 22 09:08:03 2021 -0300
+
+    [FIX] l10n_ar_sale: show the number of all the document types in the reports
+
+[33mcommit f89d5027e297c0846889854124596c5f0c380a89[m
+Author: Pablo Paez <pablopaezps97@gmail.com>
+Date:   Fri Apr 23 15:30:57 2021 -0300
+
+    [FIX]l10n_ar_sale: origin field removed from sale order report
+
+[33mcommit e92f0f844f8d6190091039b189bed3baa578bd25[m
+Author: Pablo Paez <pablopaezps97@gmail.com>
+Date:   Fri Apr 9 09:47:29 2021 -0300
+
+    [FIX]l10n_ar_sale: show unit price with tax
+    
+    fix unit price in sale order portal content view
+
+[33mcommit 9aa2e162ef7eeaaca54a30a515462e1146051e1d[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Apr 7 14:26:44 2021 -0300
+
+    [IMP] l10n_ar_stock: use remito report_name
+
+[33mcommit 3f86ae3ae659d0fad1c56a231330b62f043aedae[m
+Author: nmadhoc <nm@adhoc.com.ar>
+Date:   Fri Mar 5 12:48:41 2021 -0300
+
+    [IMP] l10n_ar_stock: purchase_order_number in report_deliveryslip
+    Added below the origin field
+
+[33mcommit 71e09fce4d714eb195e1e58cc3a9e77a78604ab1[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sat Mar 20 06:29:19 2021 -0300
+
+    [FIX] l10n_ar_sale: tax discrimnation
+
+[33mcommit a408f6b6096232417fb2a6a93acc6d039c2b892d[m
+Author: Bruno Zanotti (ADHOC) <bz@adhoc.com.ar>
+Date:   Mon Mar 8 12:02:12 2021 -0300
+
+    [IMP] l10n_ar_stock: add dispatch number
+    
+    Odoo shows the lots information on the invoice reports in a separate
+    table, so we add a new column with the dispatch number.
+
+[33mcommit 8c0a31f6b9e4dd05dc90a2c21f02112869b45279[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon Mar 1 08:53:44 2021 -0300
+
+    [IMP] l10n_ar_stock: re-introduce report partner
+    Se re-introduce el campo report partner como estaba en v12-
+
+[33mcommit bc20b93f8b602edf2c324bc16540ad53d894f93f[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Feb 17 11:08:31 2021 -0300
+
+    [IMP] remove code no needed on new runbot
+
+[33mcommit f57800f7c2ccb5b0aff68f8ada6fad7b9e054a50[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Tue Feb 2 06:34:37 2021 -0300
+
+    [FIX] l10n_ar_sale: update manifest version
+
+[33mcommit d53b6a18fb4da0095e92455fef1108f13323342e[m
+Author: Katherine Zaoral <kz@adhoc.com.ar>
+Date:   Mon Feb 1 17:10:33 2021 -0300
+
+    [FIX] l10n_ar_sale: sale report translatable terms
+    
+    Make sale.order report title translatable.
+
+[33mcommit 980ee520a696fff7a108e76dbf2ee14912a1bab5[m
+Author: Nicolás Mac Rouillon <nmr@adhoc.com.ar>
+Date:   Thu Jan 28 15:43:59 2021 -0300
+
+    [13.0] [FIX] l10n_ar_stock: use sudo to create stock book
+
+[33mcommit e2dfa19a290903a4364882eaef2dbfdf10e1f479[m
+Author: ADHOC - Transbot <transbot@adhoc.com.ar>
+Date:   Thu Jan 28 07:05:01 2021 -0300
+
+    OCA Transbot updated translations from Transifex
+
+[33mcommit 062ea813c69cfce6483a9984ab8d50299e19ee0a[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Thu Jan 14 14:47:01 2021 -0300
+
+    [IMP] l10n_ar_stock: move packages qty from _delivery
+
+[33mcommit ba869e8a40a98245b29ff6a7d5427ad29ed34c43[m
+Author: ADHOC - Transbot <transbot@adhoc.com.ar>
+Date:   Tue Jan 12 17:32:37 2021 -0300
+
+    OCA Transbot updated translations from Transifex
+
+[33mcommit ce82456e589044c9355ef66fa287272d3361ecd3[m
+Author: Nicolás Mac Rouillon <nmr@adhoc.com.ar>
+Date:   Wed Dec 30 16:18:03 2020 -0300
+
+    [FIX] To avoid problems with not having the sale_stock module installed
+
+[33mcommit f976874078bcce11faea3ee7060c25f63bcb1a67[m
+Author: Nicolás Mac Rouillon <nmr@adhoc.com.ar>
+Date:   Wed Dec 30 14:29:46 2020 -0300
+
+    [13.0] [FIX]l10n_ar_stock: Show the nbr picking if there aren't vouchers for that picking.
+
+[33mcommit 2ff49e62d14878b61115055c799bc7bb8bc55e47[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Fri Dec 11 14:44:43 2020 -0300
+
+    [IMP] l10n_ar_stock_delivery: add carrier address
+
+[33mcommit b3059f1f01fe44917fdd74f252ecb72e06884677[m
+Author: Nicolás Mac Rouillon <nmr@adhoc.com.ar>
+Date:   Wed Nov 18 09:21:01 2020 -0300
+
+    [13.0] [ADD] l10n_ar_sale_order_type: Choose any checkbook who are in the company of sale order type.
+
+[33mcommit 9178fb693ffeb689efb20e0cbe7f682b8a71ca73[m
+Author: Nicolás Mac Rouillon <nmr@adhoc.com.ar>
+Date:   Wed Nov 18 09:20:26 2020 -0300
+
+    [13.0] [ADD] Multi-company rule for sale checkbook.
+
+[33mcommit bda20194488d83c8f341b0e4703a6115d833cc65[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Sep 23 10:00:52 2020 -0300
+
+    [FIX] l10n_ar_stock: do not require cot to for doc type
+
+[33mcommit 8abab3616744c3e8e30dff47fbfe1cd48aa20c08[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Tue Sep 22 12:35:18 2020 -0300
+
+    [REF] l10n_ar_sale: add date on context from l10n_ar_sale
+    Also fix the implementation on v13
+
+[33mcommit c2448cacf65be95013301e072a2471ffb08089f0[m
+Author: Nicolás Mac Rouillon <nmr@adhoc.com.ar>
+Date:   Thu Aug 13 16:01:35 2020 -0300
+
+    [13.0] [FIX] l10n_ar_stock: Avoid a fix when use the report without delivery module
+    
+    Some part of the code in the report depedends of fields who are in the delivery module, move all of those changes to the module with the compatibility for stock and delivery module.
+
+[33mcommit 53274a6134178c5c947d01b0b2fb5c516c21bbbf[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Aug 5 17:25:15 2020 -0300
+
+    [FIX] l10n_ar_stock: deliveryslip without partner
+
+[33mcommit b06b27bbcbc4cf6dddef25901721062f3e968cfe[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Aug 5 17:24:54 2020 -0300
+
+    [FIX] l10n_ar_sale: use commercial partner on pdf
+
+[33mcommit 28fb555c2c5282f9a8dd9b8d6ce0957fef8a1d82[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Tue Jul 14 00:05:14 2020 -0300
+
+    [FIX] update manifest version
+
+[33mcommit dc424bc2947c36d9c647e3e9236634f848b09970[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon Jul 13 22:24:08 2020 -0300
+
+    [IMP] l10n_ar_stock: split into x_delivery
+
+[33mcommit 1a8fe8a89bc9450ca61a4c512a7ce06751e45167[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Jul 1 22:24:30 2020 -0300
+
+    [IMP] l10n_ar_sale: report and translations
+
+[33mcommit e92bfcbf56dae5a9cd0a4e1d8c47705db4ed3e2a[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Jul 1 22:16:10 2020 -0300
+
+    [IMP] l10n_ar_stock: translations
+
+[33mcommit f32733067acd7755d7d1c8d0dced0caee08de7d6[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Jul 1 22:15:55 2020 -0300
+
+    [IMP] l10n_ar_stock: remito report
+
+[33mcommit 1e29efed15d8ecdf6c883b69dcabb5435011660f[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Jun 24 00:48:54 2020 -0300
+
+    [FIX] COT get
+
+[33mcommit 7979b535bd3097d835f8e06c02e72cda5d949fd1[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon Jun 22 07:34:08 2020 -0300
+
+    [IMP] l10n_ar_stock: show arba also on pp
+
+[33mcommit 5bbf9320d83dff10e453c3d21c5f5d678b7c3068[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Fri Jun 5 23:25:46 2020 -0300
+
+    [ADD] report partner from report_extended
+
+[33mcommit 0e3074a055a2a23ccb9ec028c9dd13a06fbb094c[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon Jun 1 09:16:32 2020 -0300
+
+    [FIX] lint
+
+[33mcommit aa3341331465c1ac5c08f784c6f9014aa12b0c3d[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sat May 30 00:36:40 2020 -0300
+
+    [FIX] remove duplicated CAI
+
+[33mcommit 76c9b5b231b20476b328171044c0001c2516e28e[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sat May 30 00:32:16 2020 -0300
+
+    [ADD] barcode to picking
+
+[33mcommit 279e5078708304daa0e1d193e058429048f4fe24[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Tue May 26 00:16:33 2020 -0300
+
+    [IMP] enable remito doc types
+
+[33mcommit 33578f11053e17321ca5c78fcca84fa13d404fed[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Tue May 26 00:02:00 2020 -0300
+
+    [FIX] arba cot
+
+[33mcommit 7a2795c942d6b7991185e60b0d3616e0e4ebf831[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon May 25 23:43:35 2020 -0300
+
+    [FIX] l10n_ar_stock: no readonly for cot config
+
+[33mcommit 5ec82bc86964d499b8cbb060ac96e81e1c2fcd1b[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon May 25 22:21:46 2020 -0300
+
+    [IMP] add warehouse address on remito header
+
+[33mcommit 42574dee7d5bedcdea53d60305ff4704b8fed0cd[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sun May 24 22:03:58 2020 -0300
+
+    [ADD] l10n_ar_stock: remito report
+
+[33mcommit 821c4904d415ba92aff24f4a98793ae8a858fb5d[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Fri May 1 00:02:33 2020 -0300
+
+    [IMP] l10n_ar_sale report
+
+[33mcommit f63460b6003659fd38c7790c6d5fa876885737de[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Fri Apr 10 16:31:31 2020 -0300
+
+    [MIG] l10n_ar_sale_order_type/: Migration to 13.0 (#42)
+
+[33mcommit 7c3d59d2f5be091b67042ce78c83bfc1daac5771[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Fri Apr 10 16:06:54 2020 -0300
+
+    [MIG] l10n_ar_stock/: Migration to 13.0 (#41)
+
+[33mcommit 8f01c98902eaee767a917895984b74bca6c12a20[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Thu Apr 9 17:21:41 2020 -0300
+
+    [MIG] l10n_ar_sale: Migration to 13.0 (#40)
+
+[33mcommit 5b0661a6f10276b12c0fe57c5f3235cdeebb80c0[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Fri Feb 28 11:33:43 2020 -0300
+
+    [MIG] Update metafiles
+
+[33mcommit 1a32f6e25ef29d7446b19a9f9227513745923cac[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Fri Feb 28 11:33:39 2020 -0300
+
+    [MIG] Make modules uninstallable
+
+[33mcommit d68dca8215c2e743359662427956c2a03c5dec03[m
+Author: Nicolas Mac Rouillon <nicomacr@users.noreply.github.com>
+Date:   Wed Jan 29 17:13:12 2020 -0300
+
+    [12.0] [FIX] l10n_ar_sal: Some changes (#37)
+
+[33mcommit cff7eb004909c810101c23ccdc6587080f9dd0fc[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Fri Jan 3 07:04:59 2020 -0300
+
+    OCA Transbot updated translations from Transifex
+
+[33mcommit 2628c50971e2b1866829608f2c23d24b0bc1ac5c[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Wed Dec 25 22:10:04 2019 -0300
+
+    OCA Transbot updated translations from Transifex
+
+[33mcommit 0a0ab012c068f796a215441773ef731f89e8faa9[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Dec 25 21:45:59 2019 -0300
+
+    [REM] bad translations
+
+[33mcommit 48381db3103648c23e5b2c8bb923a69b27afda61[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Dec 25 21:22:33 2019 -0300
+
+    [FIX] remove broken translations
+
+[33mcommit 149212951b0877e912e7e2d8815aa5f9e6871d12[m
+Author: Katherine Zaoral <zaoral@users.noreply.github.com>
+Date:   Fri Nov 22 12:06:31 2019 -0300
+
+    [FIX] l10n_ar_sale: remove transfer_account_id param from _load_template (#36)
+    
+    * [FIX] l10n_ar_sale: remove transfer_account_id param from _load_template
+    
+    This method does not have this parameter anymore, it was in version 11.0
+    but was removed in version 12.0
+    
+    * [pylint] l10n_ar_sale: Fix E501 line too long
+
+[33mcommit 634f094ee1ba3f986a5125caa412c455dab18c77[m
+Author: Nicolas Mac Rouillon <nicomacr@users.noreply.github.com>
+Date:   Sun Sep 22 22:26:40 2019 -0300
+
+    [PORT] from 11.0 (#33)
+    
+    [FIX] l10n_ar_stock: FIx a bug related with COT (#32)
+    
+    IF the destination of the picking has doc_type difrente than CUIT,  the dest_cuit must be null, otherwise the comparation of the partner afip responsability it's be code not ID.
+
+[33mcommit 0816fdce1578e1ea697b224085a81e9f92077c46[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Tue Sep 17 15:22:12 2019 -0300
+
+    [FIX] report_price_subtotal with discount
+    
+    1. we fix report_price_subtotal to show discounts
+    2. we could make report_price_subtotal = report_price_net * line.product_uom_qty but for rounding or any other different behaviour that could be implemented on account.tax.compute_all, we keep the same as odoo does with native price_subtotal (sending unit price and quantity to compute_all)
+
+[33mcommit 83ca8f3124be46415ebb471cce1f44c6b0fcc0bd[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Tue Sep 17 15:44:11 2019 -0300
+
+    [ADD] Report Product Price dp
+
+[33mcommit 2af82f847307f25645b0912cb917b9add3823f91[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sun Sep 8 11:08:35 2019 -0300
+
+    [FIX] arba cot uom conversion
+
+[33mcommit 225aca612ef8e59c10be110daf914d2e4ffeaac0[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Aug 28 11:00:44 2019 -0300
+
+    [FIX] rerport amounts
+    
+    * use partner_shipping_id insttead of partner_id (as in odoo core)
+    * get report_price_subtotal from price unit and qty because if we use price_subtotal it doesn't work for tax included on price and sales with tax included
+
+[33mcommit 34f6e10d9dc2ee20d8f9a4f52b3c2bcca891697f[m
+Merge: 4be92d5 93dfd72
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Aug 28 10:40:22 2019 -0300
+
+    Merge branch '12.0' of github.com:ingadhoc/argentina-sale into 12.0
+
+[33mcommit 4be92d57f463e0094ef1b304532c5492f1e4ef7a[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Aug 28 10:39:38 2019 -0300
+
+    [FIX] report_price_unit not rounded
+
+[33mcommit 93dfd72c6358cc2d60afb5332a1a8b845af62f95[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Thu Aug 22 10:37:30 2019 -0300
+
+    [IMP] l10n_ar reports
+
+[33mcommit 2f29f091c23eeee348674444a566f70eb79ac490[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Wed Aug 14 14:36:37 2019 -0300
+
+    [REL] modules on v12 (#31)
+
+[33mcommit 273983a06746418fa1d63dae4093311dac90cd4d[m
+Author: Nicolas Mac Rouillon <nicomacr@users.noreply.github.com>
+Date:   Tue Aug 6 13:32:57 2019 -0300
+
+    [FIX] use price_subtotal instead of price_unit (#30)
+
+[33mcommit dfb46689a1f3a01870239d7242211be8d9339412[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon Aug 5 13:40:14 2019 -0300
+
+    [IMP] better rounding if vat included
+
+[33mcommit c851daa6c876ae631c659128da504abb10a06a45[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Fri Aug 2 17:04:25 2019 -0300
+
+    Revert "[FIX] use old arba sepecification till august"
+    
+    This reverts commit 3c42b6891908b68069f38ed581cd59312b8e3522.
+
+[33mcommit 8cbba853555d6494be5510dd07b9db7b6d5a2859[m
+Author: Nicolas Mac Rouillon <nicomacr@users.noreply.github.com>
+Date:   Wed Jul 31 09:58:24 2019 -0300
+
+    [FIX] l10n_ar_sale: Some fix with decimal precision (#26) (#27)
+    
+    This changes was to still the same logic as odoo fields in sale order line
+
+[33mcommit a6d8830af75eb9f82bf81b16e6282fba08e0530f[m
+Author: Lucas L. Soto <ls@adhoc.com.ar>
+Date:   Tue Jul 16 14:37:18 2019 -0300
+
+    [MIG] Bump to 12.0 and make modules uninstallable (#25)
+
+[33mcommit 3a0d6f94e9d0157d05134dcf5656d9b0271151f3[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Thu Jul 11 10:22:31 2019 -0300
+
+    [MIG] Update metafiles
+
+[33mcommit df8669082f8c43f4db41b056943f54365208d198[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Tue Jun 25 06:07:07 2019 -0300
+
+    OCA Transbot updated translations from Transifex
+
+[33mcommit 077e156590fb84c42500211066be76f74756387a[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon Jun 24 10:47:05 2019 -0300
+
+    [FIX] l10n_ar_stock split views
+
+[33mcommit 0049ea8e81e939755ac2ec1bd9360f194c05255e[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Thu Jun 20 06:07:16 2019 -0300
+
+    OCA Transbot updated translations from Transifex
+
+[33mcommit fb318ad722957a77822731bacb85b8732c2c4ecd[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Jun 19 20:29:01 2019 -0300
+
+    [IMP] l10n_ar_stock: allow to set dispatch number on picking
+
+[33mcommit ed6877588a1b2776b700a77f21b31216ae434295[m
+Author: Katherine Zaoral <zaoral@users.noreply.github.com>
+Date:   Mon Jun 17 20:23:42 2019 -0300
+
+    [FIX] Add postgresql version to addons in order to fix Travis tests (#22)
+
+[33mcommit 3c42b6891908b68069f38ed581cd59312b8e3522[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Jun 12 11:57:55 2019 -0300
+
+    [FIX] use old arba sepecification till august
+
+[33mcommit 2d315d01c2c7f73195a4a27dc32312fe17cc2f54[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Wed Jun 12 06:06:59 2019 -0300
+
+    OCA Transbot updated translations from Transifex
+
+[33mcommit 9223f70f86233ce2891492109f2151e3bb8ccc0d[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Tue Jun 11 15:37:27 2019 -0300
+
+    [ADD] arba cot pass
+
+[33mcommit d9b4e21359e57025dee9ef85a358894c827c5ef4[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Fri Jun 7 06:07:11 2019 -0300
+
+    OCA Transbot updated translations from Transifex
+
+[33mcommit a37614eb5377b13981e095db1c5d217af7f000c6[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Jun 5 08:58:39 2019 -0300
+
+    [ADD] new cot specification
+
+[33mcommit 9a7ed1e240118a0e5382cce0ace419ae787f019d[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Jun 5 08:58:19 2019 -0300
+
+    [FIX] arba cot
+
+[33mcommit 9689cbcfe4f24ae29d456c8122b92abdb00f4e60[m
+Author: Nicolas Mac Rouillon <nicomacr@users.noreply.github.com>
+Date:   Wed Apr 17 11:19:28 2019 -0300
+
+    [FIX] l10n_ar_sale_order_type: remove the invisible for the secuence field in SO type (#19)
+
+[33mcommit c813ab6789d466f6328ebbeafc951e2631c44c0e[m
+Author: Nicolas Mac Rouillon <nicomacr@users.noreply.github.com>
+Date:   Wed Feb 27 19:33:31 2019 +0000
+
+    [FIX] only set checkbook & sequence if the user has the group activated (#18)
+
+[33mcommit 566b535d42777930541da322f087777a33a29c54[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Feb 27 14:58:12 2019 -0300
+
+    [REF] add multicompany widget to sale_allow_vat_no_discrimination option
+
+[33mcommit 9f26307e000c970e451f63b9ab47799a7746ba5a[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Feb 27 14:55:10 2019 -0300
+
+    [FIX] vat discriminated with checkbook and make it readonly
+
+[33mcommit f8b490c49d94f94e7732c8a6862553ce10276ad5[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Feb 27 14:43:19 2019 -0300
+
+    [IMP] check if use_sale_checkbook is enable
+
+[33mcommit 7b8471e7dbb43a7b873bf78d9c97b6acc89820d5[m
+Author: Katherine Zaoral <zaoral@users.noreply.github.com>
+Date:   Tue Feb 19 12:35:58 2019 -0300
+
+    [ADD] l10n_ar_sale: Add new field report_price_reduce (#17)
+    
+    This will be used in website in order to replace the price_reduce_taxexcl and
+    price_reduce_taxexcl fields that formely were replaced by report_price_unit
+    and this was giving us troubles in the way that the discount were applied.
+
+[33mcommit 33d7b098d7a183d6e7b86db5b97aa573fa2a683d[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Sun Feb 17 11:56:30 2019 -0300
+
+    [IMP] so vat required only for argentinian companies (#16)
+
+[33mcommit 2750f8928a6a9c600d978285d4fbc49a932bcc2a[m
+Author: Nicolas Mac Rouillon <nicomacr@users.noreply.github.com>
+Date:   Wed Jan 30 17:51:47 2019 -0300
+
+    [IMP] create sale book and stock book when create a new company
+
+[33mcommit 866c1694f2001aecf0209d707747ade1fc9df62d[m
+Author: ADHOC - Transbot <transbot@adhoc.com.ar>
+Date:   Sat Jan 19 13:10:16 2019 -0200
+
+    OCA Transbot updated translations from Transifex
+
+[33mcommit 81edc6301462ce6a910297f2c406fc25f55631a3[m
+Author: nicomacr <nmr@adhoc.com.ar>
+Date:   Fri Jan 4 11:53:22 2019 -0300
+
+    [FIX] assign the variable 'vat_discriminated' to the record field
+
+[33mcommit c3430af6f36526398964764328cf70fa5faffd68[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Fri Jan 4 17:34:52 2019 -0300
+
+    [IMP] remove dependency to l10n_ar_account_withholding
+
+[33mcommit 7b3ffcecc7f8e2278ddfb95d1db425d6f7db8034[m
+Author: Nicolas Mac Rouillon <nicomacr@users.noreply.github.com>
+Date:   Thu Jan 3 19:25:30 2019 +0000
+
+     [IMP] implement sale checkbook to sale order (#13)
+    
+    * [IMP] implement sale checkbook to sale order
+    
+    * [ADD] add module to compatibility between l10n_ar_sale and sale_order_type
+
+[33mcommit 763ca6062dcf9027722427b4210357a29aee3188[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Sun Nov 25 11:16:08 2018 -0300
+
+    [IMP] add config to enable arba cot (#12)
+
+[33mcommit cc5a2b06ff082696b36be9fbdf1ccd92760116ff[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Sat Nov 24 07:38:56 2018 -0300
+
+    [ADD] dispatch number on lots (#11)
+
+[33mcommit 44fc090d6a0762bff4830e0b2a83a3b309b7c092[m
+Author: Nicolas Mac Rouillon <nicomacr@users.noreply.github.com>
+Date:   Fri Nov 23 19:48:30 2018 -0300
+
+    [REL] Migration: l10n_ar_stock to 11.0 (#10)
+    
+    * [REL] Migration: l10n_ar_stock to 11.0
+    
+    * [FIX] change the .xml files name according guidelines
+    * [FIX] fix contrains methods
+    
+    * [ADD] ingadhoc-stock to oca_dependencies
+    
+    * [IMP] envorce DESTINATARIO_RAZON_SOCIAL max 50 char on cot request
+
+[33mcommit fb95ba8cde0602bca602fb4723ae6e1304d15703[m
+Author: Katherine Zaoral <zaoral@users.noreply.github.com>
+Date:   Wed Oct 24 10:08:09 2018 -0300
+
+    [ADD] l10n_ar_sale: Sale order portal is vat discriminated aware. (#9)
+    
+    * [ADD] l10n_ar_sale: Sale order portal is vat discriminated aware.
+    
+    * [FIX] l10n_ar_sale: report_price_unit proper compute now.
+
+[33mcommit 74fdb48e249fcc88ebcacd6d70a0af18aa947e6e[m
+Author: ADHOC - Transbot <transbot@adhoc.com.ar>
+Date:   Fri Sep 28 19:32:40 2018 -0300
+
+    OCA Transbot updated translations from Transifex
+
+[33mcommit 76d01bbd904fe0d3d439b83a81aabe925414365f[m
+Author: Katherine Zaoral <zaoral@users.noreply.github.com>
+Date:   Thu Aug 23 16:33:53 2018 -0300
+
+    [IMP] Use new ingadhoc/mqt instead of OCA/mqt (#8)
+
+[33mcommit d105953740085d8eb7516f3fdff703fbeaa14cca[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sun Aug 12 21:18:02 2018 -0300
+
+    [FIX] make check_vat_tax not run on module install
+
+[33mcommit eff704093f82c4ec4d01ecd8d9ca520afb66dae8[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sun Aug 12 21:14:59 2018 -0300
+
+    [REF] use test mode to avoid tests
+
+[33mcommit 1c45c82b39a2b4b2510d142d9b6bfebf6528bc35[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sat Aug 11 09:35:08 2018 -0300
+
+    [FIX] ensure one vat tax per line
+
+[33mcommit 4f9921ee177b45e3af8f702a37a67bd6d77e329b[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Fri Aug 10 20:17:58 2018 -0300
+
+    [IMP] make constraint of vat tax depends on company afip responsability
+
+[33mcommit f1beca90ad1026a84c8f0873b3417211c48c2619[m
+Author: Nicolas Mac Rouillon <nicomacr@users.noreply.github.com>
+Date:   Fri Aug 10 12:16:38 2018 -0300
+
+    [IMP] check in sale order lines if it's setting an tax in the line only 1 task for line is allowed (#7)
+
+[33mcommit 6f6348f57f313e30a212869fd68fcc94358b8cb0[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sat Jun 30 16:00:22 2018 -0300
+
+    [REF] sale config options
+
+[33mcommit 125a7de4f84daed0767977592743d8f7ba28a1bf[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Sat Jun 30 15:48:50 2018 -0300
+
+    [REF] l10n_ar_stock
+
+[33mcommit 1c52c72ca290524dc4f47715a84df94a7b54fc46[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Sat Jun 30 15:48:02 2018 -0300
+
+    [REL] l10n_ar_sale on v11 (#6)
+    
+    * [REL] l10n_ar_sale on v11
+    
+    * [REF]
+    
+    * [FIX] oca deps
+
+[33mcommit dd41fad49418b597aedd39ba39395c62fefd7761[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Tue Jun 12 19:24:39 2018 -0300
+
+    [IMP] add vat_id field on sol
+
+[33mcommit 4e898bd5da01951d94979cc3dd5c3cdd05008f97[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon May 14 09:04:41 2018 -0300
+
+    [FIX] tx token
+
+[33mcommit 7a587e195738c5f67b31356b28ab184aceac6cf1[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Mon May 14 08:52:12 2018 -0300
+
+    [REL] init repository v11 (#4)
+    
+    * [REL] replace __openerp__ for __manifest__
+    
+    * [REL] replace openerp imports for odoo
+    
+    * [REL] replace openerp by odoo on xml files
+    
+    * [REL] delete utf-8 line on python files
+    
+    * [REL] some minor fixes for migration to v11
+
+[33mcommit a1eb7136848e9a6d60ee7f1ea1797522f418a09d[m
+Author: ADHOC - Transbot <transbot@adhoc.com.ar>
+Date:   Sun May 13 20:59:00 2018 -0300
+
+    [MIG] Update metafiles
+
+[33mcommit f8b3144ca715c382e80270f5abca0e8129ef01ec[m
+Author: ADHOC - Transbot <transbot@adhoc.com.ar>
+Date:   Sun May 13 20:58:56 2018 -0300
+
+    [MIG] Rename manifest files
+
+[33mcommit 6da6d3339ef549704b71fc54d6888d1cf86111f6[m
+Author: ADHOC - Transbot <transbot@adhoc.com.ar>
+Date:   Sun May 13 20:58:51 2018 -0300
+
+    [MIG] Make modules uninstallable
+
+[33mcommit 7f896151dfb44e0fe886d08eb95a45adf398523b[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Thu Jan 11 09:27:43 2018 -0300
+
+    REF
+
+[33mcommit 0309f9e09e49169a417d0a3f417962556f8b0eed[m
+Merge: 6e125be 8f0e7ce
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Jan 10 20:42:47 2018 -0300
+
+    Merge branch '9.0' of github.com:ingadhoc/argentina-sale into 9.0
+
+[33mcommit 6e125be7eac330d25eab05b3e0931e2bb1b98357[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Jan 10 20:42:01 2018 -0300
+
+    IMP electronic remit
+
+[33mcommit 8f0e7ce0cb21c81b39aa287c384393ae82a8c20b[m
+Author: ADHOC - Transbot <transbot@adhoc.com.ar>
+Date:   Tue Dec 5 17:15:03 2017 -0300
+
+    OCA Transbot updated translations from Transifex
+
+[33mcommit 021da16eec3d5f7c8ff38298b111832fd7231541[m
+Author: Juan José Scarafía <jjs@adhoc.com.ar>
+Date:   Mon Dec 4 19:28:10 2017 -0300
+
+    9.0 add l10n_ar_stock module
+
+[33mcommit f40fbd5111a1cf1e7b2d99d49479dcef6ba9082f[m
+Author: ADHOC - Transbot <transbot@adhoc.com.ar>
+Date:   Thu Jun 8 11:18:11 2017 -0300
+
+    OCA Transbot updated translations from Transifex
+
+[33mcommit bea980486a6f5fcf38bd67209f20b1e5805ecb93[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Tue Jun 6 10:54:48 2017 -0300
+
+    REF
+
+[33mcommit a8f60afa2a2e552fcb29e88c58e083ddf589a0cf[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Tue Jun 6 10:44:14 2017 -0300
+
+    FIX invoice report with sale
+
+[33mcommit c3c94ff72c56c73126876625d2c5ee30110960d3[m
+Merge: 5e0b838 d83ca37
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon Mar 27 17:09:15 2017 -0300
+
+    Merge branch '9.0' of github.com:ingadhoc/argentina-sale into 9.0
+
+[33mcommit 5e0b838cc3a21ef8b3a1d02b77178f4b30f21a63[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon Mar 27 16:54:37 2017 -0300
+
+    FIX vat included for contacts
+
+[33mcommit d83ca378877583c2ed92c98a1debe0f1f0fd3bff[m
+Author: ADHOC - Transbot <transbot@adhoc.com.ar>
+Date:   Thu Mar 23 11:19:20 2017 -0300
+
+    OCA Transbot updated translations from Transifex
+
+[33mcommit 90648a14823152fcf420a02388b52a371bdceb29[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Tue Mar 7 16:20:52 2017 -0300
+
+    FIX amount including tax
+
+[33mcommit 4372f54b22a01643c830ae64800e98002ac5889f[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Wed Jan 4 11:41:35 2017 -0300
+
+    IMP views
+
+[33mcommit 49654a0398a86a2284780005958c3d1eb2551626[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon Nov 21 08:32:01 2016 -0300
+
+    IMP
+
+[33mcommit 05c52eba77e26a6daed72f466394a44b630f86d1[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Thu Nov 10 17:40:13 2016 -0300
+
+    FIX
+
+[33mcommit b53d21b649823566382372ddf11e8fe098266cd0[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon Nov 7 15:13:58 2016 -0300
+
+    REF
+
+[33mcommit b527b01d0b85b55823947cd06f40c4ed7cc55c81[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon Nov 7 15:12:33 2016 -0300
+
+    IMP
+
+[33mcommit dec09d98e08053f2411ffc59cf29b2a2184de1c4[m
+Author: Juan José Scarafía <scarafia.juanjose@gmail.com>
+Date:   Mon Nov 7 19:18:51 2016 +0200
+
+    9.0 mig aeroo reports (#152)
+    
+    * REF
+    
+    * REF depacho no exportable
+    
+    * IMP
+    
+    * IMP withholding
+    
+    * FIX parser
+    
+    * [8.0][IMP][l10n_ar_account_withholding] Wizard para Exportación a SICORE (#139)
+    
+    * [8.0][IMP][l10n_ar_account_withholding] Wizard para Exportación a SICORE
+    
+    * Corregir domain. Usar siempre tuples.
+    
+    * Agregado mensaje de ayuda para evitar errores de importación.
+    
+    * [FIX][8.0][l10n_ar_account_withholding] Fix _default_*_date bug when currdate.day < 15. (#141)
+    
+    * IMP withholding
+    
+    * FIX display name rec
+    
+    * FIX
+    
+    * MIG currency update
+    
+    * FIX travis
+    
+    * MIG reports
+    
+    * MIG invoices
+    
+    * FIX deps
+    
+    * FIX lint
+    
+    * IMP
+    
+    * FIX
+    
+    * ADD sale aeroo
+    
+    * FIX
+    
+    * FIX
+    
+    * IMP
+    
+    * FIX stock picking
+    
+    * FIX
+    
+    * FIX travis
+    
+    * FIX
+    
+    * FIX
+    
+    * FIX
+    
+    * FIX
+    
+    * IMP
+
+[33mcommit 4e85c07861cd8d7ffd380a1ecc203fbb0a7818a3[m
+Author: Juan José Scarafía <scarafia.juanjose@gmail.com>
+Date:   Fri Nov 4 00:30:44 2016 +0200
+
+    9.0 imp travis (#145)
+    
+    * IMP
+    
+    * IMP
+    
+    * IMP travis
+    
+    * FIX runbot
+    
+    * IMP demo data
+    
+    * IMP
+    
+    * IMP refund usage
+    
+    * FIX codes
+    
+    * FIX travis
+    
+    * IMP barcode
+    
+    * REF remove vim comment
+    
+    * IMP bring lost mods from v8
+    
+    * IMP
+    
+    * FIX travis
+    
+    * FIX
+    
+    * FIX
+    
+    * IMP for monotributista
+    
+    * IMP demo data
+
+[33mcommit ed599ea5f0574364c3febfb4764a47f2e743ac81[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Fri Aug 26 16:57:48 2016 -0300
+
+    INIT re init v9 from 8.0
+
+[33mcommit 45a9209f633074ba30c4953648255144b07c8a6b[m
+Author: Juan Jose Scarafia <jjs@adhoc.com.ar>
+Date:   Mon Nov 7 15:09:31 2016 -0300
+
+    INIT
+
+[33mcommit 7fe66ff67122b576b44bc5431164366062bec6db[m
+Author: Juan José Scarafía <scarafia.juanjose@gmail.com>
+Date:   Mon Nov 7 15:06:59 2016 -0300
+
+    Initial commit
