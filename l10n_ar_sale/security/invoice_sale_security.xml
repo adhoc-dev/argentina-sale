@@ -15,6 +15,7 @@
     <record id="group_delivery_date_on_report_online" model="res.groups">
         <field name="name">Show Delivery Date in Quotations report and online budget</field>
         <field name="category_id" ref="base.module_category_hidden"/>
+        <field name="category_id" ref="base.module_category_hidden"/>
     </record>
 
     <record id="sale_checkbook_comp_rule" model="ir.rule">
