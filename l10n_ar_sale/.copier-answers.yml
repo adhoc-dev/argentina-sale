@@ -1,0 +1,11 @@
+# Do NOT update manually; changes here will be overwritten by Copier
+_commit: 9c7972a
+_src_path: https://github.com/ingadhoc/addons-repo-template.git
+description: Este modulo agrega, en talonarios de ventas, la posibilidad de forzar
+    la discriminación, o no, de los impuestos independientemente de la responsabilidad
+    de IVA del partner
+name: l10n_ar_sale
+odoo_version: 18.0
+pre_commit_ignore: []
+slug: ''
+

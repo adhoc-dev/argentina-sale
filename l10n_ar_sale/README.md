@@ -1,9 +1,9 @@
 [![Coverage Status](https://coveralls.io/repos/ingadhoc//badge.png?branch=18.0)](https://coveralls.io/r/ingadhoc/?branch=18.0)
 [![Code Climate](https://codeclimate.com/github/ingadhoc//badges/gpa.svg)](https://codeclimate.com/github/ingadhoc/)
 
-# argentina-sale
+# l10n_ar_sale
 
-Modules that extend odoo for common needs of ADHOC Customers
+Este modulo agrega, en talonarios de ventas, la posibilidad de forzar la discriminación, o no, de los impuestos independientemente de la responsabilidad de IVA del partner
 
 ----
 
