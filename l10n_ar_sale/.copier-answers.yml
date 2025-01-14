@@ -8,4 +8,3 @@ name: l10n_ar_sale
 odoo_version: 18.0
 pre_commit_ignore: []
 slug: ''
-
