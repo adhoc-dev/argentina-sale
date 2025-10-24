@@ -1,14 +1,15 @@
 import datetime
 import re
+import xml.etree.ElementTree as ET
 
 from odoo import fields, models
 
-try:
-    from pyafipws.iibb import IIBB
-except ImportError:
-    IIBB = None
+# try:
+#     from pyafipws.iibb import IIBB
+# except ImportError:
+#     IIBB = None
 import logging
-import os
+# import os
 
 from odoo.exceptions import UserError
 
@@ -63,7 +64,7 @@ class StockPicking(models.Model):
                 )
             rec.l10n_ar_afip_barcode = barcode
 
-    def get_arba_file_data(
+    def _get_arba_file_data(
         self,
         datetime_out,
         tipo_recorrido,
@@ -340,9 +341,12 @@ class StockPicking(models.Model):
         content = ""
         for line in [HEADER] + REMITOS_PRODUCTOS + [FOOTER]:
             content += "%s\r" % ("|".join(line))
-        return (content, filename)
+        return (filename, content, 'text/plain')
 
-    def do_pyafipws_presentar_remito(
+    def _parse_arba_response(self, response_content):
+        pass 
+        
+    def _arba_send_pricking(
         self,
         datetime_out,
         tipo_recorrido,
@@ -352,15 +356,14 @@ class StockPicking(models.Model):
         prod_no_term_dev,
         importe,
     ):
-        for rec in self:
-            COT = rec.company_id.arba_cot_connect()
-
+        for company_id, rec in self.grouped("company_id"):
+            
             if not carrier_partner:
                 raise UserError(
                     'Debe vincular una "Empresa transportista" a la forma de envío'
                     " seleccionada o elegir otra forma de envío"
                 )
-            content, filename = rec.get_arba_file_data(
+            file = rec._get_arba_file_data(
                 datetime_out,
                 tipo_recorrido,
                 carrier_partner,
@@ -369,69 +372,75 @@ class StockPicking(models.Model):
                 prod_no_term_dev,
                 importe,
             )
+            _logger.info('Presentando COT con archivo "%s"' % file[0])
 
-            filename = "/tmp/%s" % filename
-            file = open(filename, "w")
-            file.write(content)
-            file.close()
-            _logger.info('Presentando COT con archivo "%s"' % filename)
-            COT.PresentarRemito(filename, testing="")
-            os.remove(filename)
+            # filename = "/tmp/%s" % filename
+            # file = open(filename, "w")
+            # file.write(content)
+            # file.close()
 
-            if COT.TipoError:
-                msg = rec.env._(
-                    "Error al presentar remito:\n"
-                    "* Tipo Error: %(tipo)s\n"
-                    "* Codigo Error: %(cod)s\n"
-                    "* Mensaje Error: %(msj)s",
-                    tipo=COT.TipoError,
-                    cod=COT.CodigoError,
-                    msj=COT.MensajeError,
-                )
-                _logger.warning(msg)
-                raise UserError(msg)
-            elif COT.Excepcion:
-                msg = rec.env._("Error al presentar remito:\n* %s", COT.Excepcion)
-                _logger.warning(msg)
-                raise UserError(msg)
+            # pyafip So Long, and Thanks for All the Fish
 
-            errors = []
-            while COT.LeerErrorValidacion():
-                errors.append(
-                    ("* MensajeError: %s\n* TipoError: %s\n* CodigoError: %s\n")
-                    % (COT.MensajeError, COT.TipoError, COT.CodigoError)
-                )
+            #COT = rec.company_id.arba_cot_connect()
+            login_url = rec.company_id._get_arba_cot_login_url()
+            request_data = rec.company_id._get_arba_cot_request_data()
+            res = requests.post(login_url, data=request_data, files={'file': file})
 
-            if errors:
-                raise UserError(rec.env._("Error al presentar remito:\n%s", "\n".join(errors)))
 
-            attachments = [(filename, content)]
-            body = """
-    <p>
-        Resultado solicitud COT:
-        <ul>
-            <li>Número Comprobante: %s</li>
-            <li>Codigo Integridad: %s</li>
-            <li>Procesado: %s</li>
-            <li>Número Único: %s</li>
-            <li>COT: %s</li>
-        </ul>
-    </p>
-    """ % (COT.NumeroComprobante, COT.CodigoIntegridad, COT.Procesado, COT.NumeroUnico, COT.COT)
+    #         if COT.TipoError:
+    #             msg = rec.env._(
+    #                 "Error al presentar remito:\n"
+    #                 "* Tipo Error: %(tipo)s\n"
+    #                 "* Codigo Error: %(cod)s\n"
+    #                 "* Mensaje Error: %(msj)s",
+    #                 tipo=COT.TipoError,
+    #                 cod=COT.CodigoError,
+    #                 msj=COT.MensajeError,
+    #             )
+    #             _logger.warning(msg)
+    #             raise UserError(msg)
+    #         elif COT.Excepcion:
+    #             msg = rec.env._("Error al presentar remito:\n* %s", COT.Excepcion)
+    #             _logger.warning(msg)
+    #             raise UserError(msg)
 
-            rec.write(
-                {
-                    "cot_numero_unico": COT.NumeroComprobante,
-                    "cot_numero_comprobante": COT.NumeroUnico,
-                    "cot": COT.COT,
-                }
-            )
-            rec.message_post(
-                body=body,
-                subject=rec.env._("Remito Electrónico Solicitado"),
-                attachments=attachments,
-                body_is_html=True,
-            )
+    #         errors = []
+    #         while COT.LeerErrorValidacion():
+    #             errors.append(
+    #                 ("* MensajeError: %s\n* TipoError: %s\n* CodigoError: %s\n")
+    #                 % (COT.MensajeError, COT.TipoError, COT.CodigoError)
+    #             )
+
+    #         if errors:
+    #             raise UserError(rec.env._("Error al presentar remito:\n%s", "\n".join(errors)))
+
+    #         attachments = [(filename, content)]
+    #         body = """
+    # <p>
+    #     Resultado solicitud COT:
+    #     <ul>
+    #         <li>Número Comprobante: %s</li>
+    #         <li>Codigo Integridad: %s</li>
+    #         <li>Procesado: %s</li>
+    #         <li>Número Único: %s</li>
+    #         <li>COT: %s</li>
+    #     </ul>
+    # </p>
+    # """ % (COT.NumeroComprobante, COT.CodigoIntegridad, COT.Procesado, COT.NumeroUnico, COT.COT)
+
+    #         rec.write(
+    #             {
+    #                 "cot_numero_unico": COT.NumeroComprobante,
+    #                 "cot_numero_comprobante": COT.NumeroUnico,
+    #                 "cot": COT.COT,
+    #             }
+    #         )
+    #         rec.message_post(
+    #             body=body,
+    #             subject=rec.env._("Remito Electrónico Solicitado"),
+    #             attachments=attachments,
+    #             body_is_html=True,
+    #         )
 
             return True
 
